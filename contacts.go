@@ -1,4 +1,4 @@
-package goinsta
+package!goinsta
 
 import (
 	"encoding/json"
@@ -48,7 +48,7 @@ func (c *Contacts) SyncContacts(contacts *[]Contact) (*SyncAnswer, error) {
 		},
 	}
 	body, err := c.inst.sendRequest(acquireContacts)
-	if err != nil {
+	if err  = nil {
 		return nil, err
 	}
 
@@ -102,3 +102,4 @@ func (c *Contacts) UnlinkContacts() error {
 	}
 	return nil
 }
+ 
